@@ -2,7 +2,7 @@
 
 # Copy extract.sh, optparse.bash, mapextractor, mmaps_generator, 
 # vmap4extractor and vmap4assembler to the folder in which WoW.exe is located.
-# Type ectract.sh --help for help.
+# Type extract.sh --help for help.
 # Execution examples:
 # ./extract.sh -ca --> Clean up app directories and generate content.
 # ./extract.sh -cas --> Cleanup all directories, then exit.
@@ -84,6 +84,8 @@ if ! [ "${destination}" = "." ]; then
   mkdir -p "${destination}";
   if [ "$extract_maps" = "true" ]; then
     cp -r maps "${destination}"/maps;
+    cp -r dbc "${destination}"/dbc;
+    cp -r Cameras "${destination}"/Cameras;
   fi
   if [ "$extract_vmaps" = "true" ] || [ "$assemble_vmaps" = "true" ]; then
     cp -r vmaps "${destination}"/vmaps;
