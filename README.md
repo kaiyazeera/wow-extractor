@@ -40,4 +40,7 @@ Move previously created `vmaps` and `Buildings` to destination:
 # ./extract.sh -Vs -d <destination>
 ```
 
+Remember to `chown` the data to the user running the server, if required.
+
+
 Feel free to ask questions!
